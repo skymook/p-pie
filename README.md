@@ -10,6 +10,9 @@ Just give this plugin your values, and it will produce a pie chart with segement
 	var paper = Pablo('#foo').root({height:200,width:200}),
 		myPieChart = paper.pie({ values:[37, 60.67, 27, 23.405] });
 
+##Installtion
+
+Load the pie.js template after Pablo, but before your code.
 
 ##Options
 
@@ -23,16 +26,16 @@ Just give this plugin your values, and it will produce a pie chart with segement
 
 * values: `[]`
 * colours: An array of random colours
-* size: '100'
+* size: `100`
 * x: `0`
 * y: `0`
 
-Returned is a Pablo collection of path segements.
+Returned is a Pablo collection of path segements, or a single circle in the case of only one value.
 
 ##Examples
 
 For all examples, you need to have a div on your HTML page with the ID 'foo'. Like so.
-	<div id="foo"></div>
+	`<div id="foo"></div>`
 
 ###Three segement pie chart with custom colours
 
