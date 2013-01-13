@@ -2,22 +2,22 @@
 
 A pie chart plugin for the [Pablo](http://pablojs.com/) SVG library by [Premasagar Rose](http://github.com/premasagar).
 
-Just give this plugin your values, and it will produce a pie chart with segements in SVG. It returns a Pablo collection.
+Just give this plugin your values, and it will produce a pie chart with segments in SVG. It returns a Pablo collection.
 
 ###Simple Pie chart example
 
-	// at minimun, you need to provide values
+	// at minimum, you need to provide values
 	var paper = Pablo('#foo').root({height:200,width:200}),
 		myPieChart = paper.pie({ values:[37, 60.67, 27, 23.405] });
 
-##Installtion
+##Installation
 
 Load the pie.js template after Pablo, but before your code.
 
 ##Options
 
 * **values**: An array of numbers (floating point or integer)
-* **colours**: An array of colours for the fill (rgb, hex, rgba, gradient). If you don't provide any colours, or there is not enough colours in your array for the number of values, a random colour will be used to fill the segement.
+* **colours**: An array of colours for the fill (rgb, hex, rgba, gradient). If you don't provide any colours, or there is not enough colours in your array for the number of values, a random colour will be used to fill the segment.
 * **size**: The width in pixels (integer)
 * **x**: The offset from left of paper (integer)
 * **y**: The offset from top of paper (integer)
@@ -30,14 +30,14 @@ Load the pie.js template after Pablo, but before your code.
 * x: `0`
 * y: `0`
 
-Returned is a Pablo collection of path segements, or a single circle in the case of only one value.
+Returned is a Pablo collection of path segments, or a single circle in the case of only one value.
 
 ##Examples
 
 For all examples, you need to have a div on your HTML page with the ID 'foo'. Like so.
 	`<div id="foo"></div>`
 
-###Three segement pie chart with custom colours
+###Three segment pie chart with custom colours
 
 	var paper = Pablo('#foo').root({height:200,width:200}),
 		myPieChart = paper.pie({
@@ -46,11 +46,11 @@ For all examples, you need to have a div on your HTML page with the ID 'foo'. Li
 			size:150
 		});
 
-###Add stroke to the collection to seperate segements
+###Add stroke to the collection to separate segments
 
 	myPieChart.attr({stroke:'#fff'});
 
-###Getting the value of a segement
+###Getting the value of a segment
 
 Each segment has the original value, used to create it, attached to the path element. You can get to this value with the `segmentValue` attribute.
 	
@@ -61,10 +61,10 @@ Each segment has the original value, used to create it, attached to the path ele
 			size:120
 		});
 
-	// get value of first segement
+	// get value of first segment
 	console.log(myPieChart[0].attributes.segmentValue.value); // 1674.84
 
-	// get value of forth segement
+	// get value of forth segment
 	console.log(myPieChart[3].attributes.segmentValue.value); // 717
 
 Note: Only tested getting values in Chrome.
@@ -72,7 +72,7 @@ Note: Only tested getting values in Chrome.
 ###Adding an event listener to display the value
 
 	myPieChart.on('mouseover', function(e) {
-		// display this segement value in the console
+		// display this segment value in the console
 		console.log(this.attributes.segmentValue.value);
 	});
 
