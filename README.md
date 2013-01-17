@@ -62,10 +62,10 @@ Each segment has the original value, used to create it, attached to the path ele
 		});
 
 	// get value of first segment
-	console.log(myPieChart[0].attributes.segmentValue.value); // 1674.84
+	console.log(myPieChart.eq(0).attr('segmentValue')); // 1674.84
 
-	// get value of forth segment
-	console.log(myPieChart[3].attributes.segmentValue.value); // 717
+	// get value of fourth segment
+	console.log(myPieChart.eq(3).attr('segmentValue')); // 717
 
 Note: Only tested getting values in Chrome.
 
