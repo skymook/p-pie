@@ -20,7 +20,7 @@ Pablo.template('pie', function(options){
 		y = options.y || 0,
 		myRadius = size * 0.5,
 		degreeRadian = Math.PI / 180,
-		unit = 0, runningTotal, unitTotal, thisSegement, i, flipBits,
+		unit = 0, runningTotal, unitTotal, thisSegment, i, flipBits,
 		cosX, sinY, x1, y1, x2, y2, collection, pathStr;
 
 		runningTotal = unitTotal = 0;
@@ -53,15 +53,15 @@ Pablo.template('pie', function(options){
 					x1=x2;
 					y1=y2;
 				}
-				thisSegement = values[i] / unit;
-				runningTotal += thisSegement;
+				thisSegment = values[i] / unit;
+				runningTotal += thisSegment;
 				// calculate end point (x,y cords)
 				cosX = Math.cos(runningTotal*degreeRadian);
 				sinY = Math.sin(runningTotal*degreeRadian);
 				x2 = myRadius + (cosX*myRadius);
 				y2 = myRadius - (sinY*myRadius);
 				// long or short way round
-				if (thisSegement>180) {
+				if (thisSegment>180) {
 					flipBits = '0 1,0';
 				} else {
 					flipBits = '0 0,0';
