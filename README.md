@@ -7,7 +7,7 @@ Just give this plugin your values, and it will produce a pie chart with segments
 ###Simple Pie chart example
 
 	// at minimum, you need to provide values
-	var paper = Pablo('#foo').root({height:200,width:200}),
+	var paper = Pablo('#foo').svg({height:200,width:200}),
 		myPieChart = paper.pie({ values:[37, 60.67, 27, 23.405] });
 
 ##Installation
@@ -39,7 +39,7 @@ For all examples, you need to have a div on your HTML page with the ID 'foo'. Li
 
 ###Three segment pie chart with custom colours
 
-	var paper = Pablo('#foo').root({height:200,width:200}),
+	var paper = Pablo('#foo').svg({height:200,width:200}),
 		myPieChart = paper.pie({
 			values:[6, 7, 8],
 			colours:['#3873b4', '#2b9ac5', '#274bc5'],
@@ -54,7 +54,7 @@ For all examples, you need to have a div on your HTML page with the ID 'foo'. Li
 
 Each segment has the original value, used to create it, attached to the path element. You can get to this value with the `segmentValue` attribute.
 	
-	var paper = Pablo('#foo').root({height:200,width:200}),
+	var paper = Pablo('#foo').svg({height:200,width:200}),
 		myPieChart = paper.pie({
 			values:[1674.84, 1129.10, 3434.56, 717.00],
 			colours:['#3873b4', '#2b9ac5', '#274bc5'],
@@ -81,7 +81,7 @@ Note: Only tested getting values in Chrome.
 In the case where only one value is given, the template returns a circle instead of a path.
 
 	// returns a Pablo collection with a single circle
-	var paper = Pablo('#foo').root({height:200,width:200}),
+	var paper = Pablo('#foo').svg({height:200,width:200}),
 		myPieChart = paper.pie({
 			values:[7]
 		});
